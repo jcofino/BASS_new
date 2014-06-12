@@ -32,7 +32,8 @@ function InlinePlayer() {
     		cols: 5,
     		rows: 5
     	},
-    	transposed: true
+    	transposed: true,
+    	isStereo: true
    	}
 
     this.config = {
@@ -210,6 +211,7 @@ function InlinePlayer() {
             thisSound = sm.createSound({
                 id: 'inlineMP3Sound' + (self.soundCount++),
                 url: soundURL,
+                pan: self.setPanning(),
                 onplay: self.events.play,
                 onstop: self.events.stop,
                 onpause: self.events.pause,
@@ -307,7 +309,37 @@ function InlinePlayer() {
         }
     };
     
-    
+    this.setPanning = function() {
+    	var panning;
+	    if (self.table.isStereo){
+	    	var col_index = parseInt(self.curr_focus.attr('id')[1], 10);
+	    	switch ( col_index ) {
+	    		case 0:
+	    			panning = 0;
+	    			break;
+	    		case 1:
+	    			panning = -100;
+	    			break;
+	    		case 2:
+	    			panning = -50;
+	    			break;
+	    		case 3:
+	    			panning = 0;
+	    			break;
+	    		case 4:
+	    			panning = 50;
+	    			break;
+	    		case 5:
+	    			panning = 100;
+	    			break;
+	    		default:
+	    			console.warn('Panning is broken!');
+	    	}
+	    	return panning;
+	    } else {
+	    	return 0;
+	    }
+    };
 		
     this.init = function() {
     		self.curr_focus = $('#C0R1');
