@@ -225,7 +225,8 @@ function InlinePlayer() {
 
     this.init = function() {
         sm._writeDebug('inlinePlayer.init()');
-        var oLinks = document.getElementsByTagName('a');
+        // var oLinks = document.getElementsByTagName('a');
+        var oLinks = $('a');
         // grab all links, look for .mp3
         var foundItems = 0;
         for (var i = 0, j = oLinks.length; i < j; i++) {
