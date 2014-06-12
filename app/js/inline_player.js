@@ -70,8 +70,14 @@ function InlinePlayer() {
     }
 
     this.addClass = function(o, cStr) {
+    		/*
+    		$o = o;
+    		$o.addClass( cStr ); // jQuery
+    		*/
+        
         if (!o || !cStr || self.classContains(o, cStr)) return false;
         o.className = (o.className ? o.className + ' ' : '') + cStr;
+        
     }
 
     this.removeClass = function(o, cStr) {
