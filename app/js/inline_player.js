@@ -25,6 +25,13 @@ function InlinePlayer() {
     this.indexByURL = [];
     this.lastSound = null;
     this.soundCount = 0;
+    
+    this.table = {
+    	dimensions: {
+    		cols: 5,
+    		rows: 5
+    	}
+   	}
 
     this.config = {
         playNext: false, // stop after one sound, or play through list until end
@@ -225,7 +232,69 @@ function InlinePlayer() {
         soundManager.stop(oSound.id);
         soundManager.unload(oSound.id);
     }
+		
+		this.leftArrowPressed = function() {
+        var curr_focus = $(document.activeElement);
+        var column_index = parseInt(curr_focus.id[1]);
+        if (column_index !== 0) {
+            curr_focus = $('#C' + (--column_index) + 'R' + curr_focus.id[3]);
+            curr_focus.focus();
+            /*if (table.display) {
+                $('#focus').html(curr_focus.html());
+            }*/
+            return false;
+        } else {
+            return true;
+        }
+    };
 
+    this.rightArrowPressed = function() {
+        var curr_focus = $(document.activeElement);
+        var column_index = parseInt(curr_focus.id[1]);
+        if (column_index !== self.table.dimensions.cols) {
+            curr_focus = $('#C' + (++column_index) + 'R' + curr_focus.id[3]);
+            curr_focus.focus();
+            /*if (table.display) {
+                $('#focus').html(curr_focus.html());
+            }*/
+            return false;
+        } else {
+            return true;
+        }
+    };
+
+    this.downArrowPressed = function() {
+        var curr_focus = $(document.activeElement);
+        var row_index = parseInt(curr_focus.id[3]);
+        if (row_index !== table.dimensions.rows) {
+            //var new_id = curr_focus.id.slice(0, 3) + (++row_index);
+            curr_focus = $('#' + curr_focus.id.slice(0, 3) + (++row_index) );
+            curr_focus.focus();
+            /*if (table.display) {
+                $('#focus').html(curr_focus.html());
+            }*/
+            return false;
+        } else {
+            return true;
+        }
+    };
+
+    this.upArrowPressed = function() {
+        var curr_focus = $(document.activeElement);
+        var row_index = parseInt(curr_focus.id[3]);
+        if ((row_index === 1 && table.transposed) || (row_index === 0 && !table.transposed)) {
+            return true;
+        } else {
+            //var new_id = curr_focus.id.slice(0, 3) + (--row_index);
+            curr_focus = $('#' + curr_focus.id.slice(0, 3) + (--row_index) );
+            curr_focus.focus();
+            /*if (table.display) {
+                $('#focus').html(curr_focus.html());
+            }*/
+            return false;
+        }
+    };
+		
     this.init = function() {
         sm._writeDebug('inlinePlayer.init()');
         // var oLinks = document.getElementsByTagName('a');
@@ -241,7 +310,7 @@ function InlinePlayer() {
             }
         }
         if (foundItems > 0) {
-            self.addEventHandler($(document), 'click', self.handleKeystroke);
+            self.addEventHandler($(document), 'keydown', self.handleKeystroke);
             if (self.config.autoPlay) {
                 self.handleKeystroke({
                     target: self.links[0],
