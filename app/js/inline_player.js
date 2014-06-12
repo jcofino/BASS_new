@@ -45,11 +45,13 @@ function InlinePlayer() {
         o.attachEvent('on' + evtName, evtHandler);
     });
 
+		/* This never seems to be called anywhere
     this.removeEventHandler = (typeof window.removeEventListener !== 'undefined' ? function(o, evtName, evtHandler) {
         return o.removeEventListener(evtName, evtHandler, false);
     } : function(o, evtName, evtHandler) {
         return o.detachEvent('on' + evtName, evtHandler);
     });
+    */
 
     this.classContains = function(o, cStr) {
         return (typeof(o.className) != 'undefined' ? o.className.match(new RegExp('(\\s|^)' + cStr + '(\\s|$)')) : false);
@@ -240,7 +242,8 @@ function InlinePlayer() {
 
 var inlinePlayer = null;
 
-soundManager.setup({
+soundManager.setup(
+	{
     // disable or enable debug output
     debugMode: true,
     // use HTML5 audio for MP3/MP4, if available
@@ -250,7 +253,8 @@ soundManager.setup({
     url: '../../swf/',
     // optional: enable MPEG-4/AAC support (requires flash 9)
     flashVersion: 9
-});
+	}
+);
 
 // ----
 
