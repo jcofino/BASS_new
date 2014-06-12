@@ -25,12 +25,14 @@ function InlinePlayer() {
     this.indexByURL = [];
     this.lastSound = null;
     this.soundCount = 0;
+    this.curr_focus = null;
     
     this.table = {
     	dimensions: {
     		cols: 5,
     		rows: 5
-    	}
+    	},
+    	transposed: true
    	}
 
     this.config = {
@@ -168,6 +170,13 @@ function InlinePlayer() {
     this.handleKeystroke = function(e) {
         // a sound link was keystroked
         
+        // Debugging
+        /*
+        console.clear();
+        self.curr_focus = $(document.activeElement);
+        console.log('Current focus: ' + self.curr_focus.html());
+        */
+                
         var o = self.getTheDamnLink(e);
         if (o.nodeName.toLowerCase() != 'a') {
             o = self.isChildOfNode(o, 'a');
@@ -225,6 +234,7 @@ function InlinePlayer() {
         } else {
             event.returnValue = false;
         }
+        console.log('Sound played!');
         return false;
     }
 
@@ -234,13 +244,14 @@ function InlinePlayer() {
     }
 		
 		this.leftArrowPressed = function() {
-        var curr_focus = $(document.activeElement);
-        var column_index = parseInt(curr_focus.id[1]);
+				console.log('left arrow pressed');
+        var column_index = parseInt(self.curr_focus.attr('id')[1],10);
+        console.log('Column index: ' + column_index);
         if (column_index !== 0) {
-            curr_focus = $('#C' + (--column_index) + 'R' + curr_focus.id[3]);
-            curr_focus.focus();
+            self.curr_focus = $('#C' + (--column_index) + 'R' + self.curr_focus.attr('id')[3]);
+            self.curr_focus.focus();
             /*if (table.display) {
-                $('#focus').html(curr_focus.html());
+                $('#focus').html(self.curr_focus.html());
             }*/
             return false;
         } else {
@@ -249,13 +260,14 @@ function InlinePlayer() {
     };
 
     this.rightArrowPressed = function() {
-        var curr_focus = $(document.activeElement);
-        var column_index = parseInt(curr_focus.id[1]);
+    		console.log('right arrow pressed');
+        var column_index = parseInt(self.curr_focus.attr('id')[1],10);
+        console.log('Column index: ' + column_index);
         if (column_index !== self.table.dimensions.cols) {
-            curr_focus = $('#C' + (++column_index) + 'R' + curr_focus.id[3]);
-            curr_focus.focus();
+            self.curr_focus = $('#C' + (++column_index) + 'R' + self.curr_focus.attr('id')[3]);
+            self.curr_focus.focus();
             /*if (table.display) {
-                $('#focus').html(curr_focus.html());
+                $('#focus').html(self.curr_focus.html());
             }*/
             return false;
         } else {
@@ -264,14 +276,14 @@ function InlinePlayer() {
     };
 
     this.downArrowPressed = function() {
-        var curr_focus = $(document.activeElement);
-        var row_index = parseInt(curr_focus.id[3]);
-        if (row_index !== table.dimensions.rows) {
-            //var new_id = curr_focus.id.slice(0, 3) + (++row_index);
-            curr_focus = $('#' + curr_focus.id.slice(0, 3) + (++row_index) );
-            curr_focus.focus();
+    		console.log('down arrow pressed');
+        var row_index = parseInt(self.curr_focus.attr('id')[3],10);
+        if (row_index !== self.table.dimensions.rows) {
+            //var new_id = self.curr_focus.attr('id').slice(0, 3) + (++row_index);
+            self.curr_focus = $('#' + self.curr_focus.attr('id').slice(0, 3) + (++row_index) );
+            self.curr_focus.focus();
             /*if (table.display) {
-                $('#focus').html(curr_focus.html());
+                $('#focus').html(self.curr_focus.html());
             }*/
             return false;
         } else {
@@ -280,22 +292,33 @@ function InlinePlayer() {
     };
 
     this.upArrowPressed = function() {
-        var curr_focus = $(document.activeElement);
-        var row_index = parseInt(curr_focus.id[3]);
-        if ((row_index === 1 && table.transposed) || (row_index === 0 && !table.transposed)) {
+    		console.log('up arrow pressed');
+        var row_index = parseInt(self.curr_focus.attr('id')[3],10);
+        if ((row_index === 1 && self.table.transposed) || (row_index === 0 && !self.table.transposed)) {
             return true;
         } else {
-            //var new_id = curr_focus.id.slice(0, 3) + (--row_index);
-            curr_focus = $('#' + curr_focus.id.slice(0, 3) + (--row_index) );
-            curr_focus.focus();
+            //var new_id = self.curr_focus.attr('id').slice(0, 3) + (--row_index);
+            self.curr_focus = $('#' + self.curr_focus.attr('id').slice(0, 3) + (--row_index) );
+            self.curr_focus.focus();
             /*if (table.display) {
-                $('#focus').html(curr_focus.html());
+                $('#focus').html(self.curr_focus.html());
             }*/
             return false;
         }
     };
+    
+    
 		
     this.init = function() {
+    		self.curr_focus = $('#C0R1');
+    		self.curr_focus.focus();
+    		
+    		// Keystroke handling with keyStroke jQuery plug-in
+    		$.keyStroke(37, self.leftArrowPressed);
+    		$.keyStroke(38, self.upArrowPressed);
+    		$.keyStroke(39, self.rightArrowPressed);
+    		$.keyStroke(40, self.downArrowPressed);
+    		
         sm._writeDebug('inlinePlayer.init()');
         // var oLinks = document.getElementsByTagName('a');
         var oLinks = $('a');
