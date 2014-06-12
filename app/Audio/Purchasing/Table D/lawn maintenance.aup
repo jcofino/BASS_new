@@ -1,0 +1,65 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="lawn maintenance_data" version="1.3.0" audacityversion="2.0.1" sel0="0.0000000000" sel1="0.0000000000" vpos="0" h="0.0000000000" zoom="1668.5534591195" rate="44100.0">
+	<tags/>
+	<wavetrack name="lawn maintenance" channel="2" linked="0" mute="0" solo="0" height="126" minimized="0" rate="22050" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="20034">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000f4c.au" len="20034" min="-0.995161" max="0.858795" rms="0.133135"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="mower" channel="2" linked="0" mute="0" solo="0" height="126" minimized="0" rate="22050" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="8928">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000831.au" len="8928" min="-1.0" max="0.745621" rms="0.083098"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="shovel" channel="2" linked="0" mute="0" solo="0" height="126" minimized="0" rate="22050" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="10042">
+				<waveblock start="0">
+					<simpleblockfile filename="e000091d.au" len="10042" min="-0.907457" max="0.999491" rms="0.068093"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="rake" channel="2" linked="0" mute="0" solo="0" height="126" minimized="0" rate="22050" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="8782">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000a88.au" len="8782" min="-0.995734" max="0.972154" rms="0.07585"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="hedge clipper" channel="2" linked="0" mute="0" solo="0" height="126" minimized="0" rate="22050" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="15924">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000d1f.au" len="15924" min="-1.0" max="0.72481" rms="0.072035"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="fertilizer" channel="2" linked="0" mute="0" solo="1" height="126" minimized="0" rate="22050" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="15924">
+				<waveblock start="0">
+					<simpleblockfile filename="e00002aa.au" len="15924" min="-0.7292" max="0.764904" rms="0.064505"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>

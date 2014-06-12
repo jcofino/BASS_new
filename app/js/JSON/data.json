@@ -1,0 +1,6 @@
+{
+	'A': {
+		'Furniture':	{'Chairs',	'Tables',	'Couches',	'Desks',	'Beds'},
+		'Office Supplies':	{'Scissors',	'Paper',	'Staples',	'Pencils',	'Pens'},
+		}
+};

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<audacityproject projname="table 1_data" version="1.1.0" audacityversion="1.2.6" sel0="0.0000000000" sel1="0.0000000000" vpos="0" h="0.0000000000" zoom="1995.5467768001" rate="44100.000000" >
+	<tags title="Desks" artist="" album="" track="6" year="" genre="0" comments="" id3v2="0" />
+	<wavetrack name="Furniture" channel="2" linked="0" offset="0.00044362" rate="22050.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="12130" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00047.au' len='12130' min='-0.996201' max='0.775408' rms='0.078301'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+	<wavetrack name="Beds" channel="2" linked="0" offset="0.00102761" rate="22050.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="7626" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00034.au' len='7626' min='-0.663634' max='0.629340' rms='0.051421'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+	<wavetrack name="Chairs" channel="2" linked="0" offset="0.00043534" rate="22050.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="9239" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00048.au' len='9239' min='-0.998993' max='0.808749' rms='0.086119'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+	<wavetrack name="Tables" channel="2" linked="0" offset="0.00050804" rate="22050.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="10563" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00040.au' len='10563' min='-1.000000' max='0.813094' rms='0.072491'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+	<wavetrack name="Couches" channel="2" linked="0" offset="0.00049977" rate="22050.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="12221" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00049.au' len='12221' min='-0.996074' max='0.935786' rms='0.092507'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+	<wavetrack name="Desks" channel="2" linked="0" offset="0.00000468" rate="22050.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="8829" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00044.au' len='8829' min='-0.827194' max='0.761447' rms='0.055392'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+</audacityproject>

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<audacityproject projname="clothing_data" version="1.1.0" audacityversion="1.2.6" sel0="0.0015464493" sel1="0.4559682180" vpos="0" h="0.0000000000" zoom="2405.2810042565" rate="44100.000000" >
+	<tags title="hats" artist="" album="" track="6" year="" genre="0" comments="" id3v2="0" />
+	<wavetrack name="clothing" channel="2" linked="0" offset="0.00000000" rate="22050.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="13861" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00144.au' len='13861' min='-0.895637' max='0.998362' rms='0.064720'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+	<wavetrack name="shirts" channel="2" linked="0" offset="0.00024601" rate="22050.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="11015" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00145.au' len='11015' min='-0.899906' max='0.999858' rms='0.057161'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+	<wavetrack name="pants" channel="2" linked="0" offset="0.00015693" rate="22050.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="10785" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00150.au' len='10785' min='-0.989152' max='0.994595' rms='0.080025'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+	<wavetrack name="skirts" channel="2" linked="0" offset="0.00127200" rate="22050.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="10743" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00151.au' len='10743' min='-0.940955' max='0.999107' rms='0.068334'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+	<wavetrack name="shoes" channel="2" linked="0" offset="0.00129522" rate="22050.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="9351" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00152.au' len='9351' min='-1.000000' max='0.917794' rms='0.095350'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+	<wavetrack name="hats" channel="2" linked="0" offset="0.00113829" rate="22050.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="10020" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00153.au' len='10020' min='-0.993001' max='1.000000' rms='0.070027'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+</audacityproject>

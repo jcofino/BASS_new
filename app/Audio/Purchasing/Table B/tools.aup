@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<audacityproject projname="tools_data" version="1.1.0" audacityversion="1.2.6" sel0="0.0000000000" sel1="0.0000000000" vpos="0" h="0.0000000000" zoom="1921.5799371091" rate="44100.000000" >
+	<tags title="screwdriver" artist="" album="" track="6" year="" genre="0" comments="" id3v2="0" />
+	<wavetrack name="tools" channel="2" linked="0" offset="0.00000000" rate="22050.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="12098" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00126.au' len='12098' min='-0.999124' max='0.659322' rms='0.081609'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+	<wavetrack name="wrench" channel="2" linked="0" offset="0.00020336" rate="22050.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="11145" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00127.au' len='11145' min='-1.000000' max='0.764998' rms='0.074186'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+	<wavetrack name="hammer" channel="2" linked="0" offset="0.00013497" rate="22050.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="8353" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00124.au' len='8353' min='-0.753122' max='0.998179' rms='0.062800'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+	<wavetrack name="drill" channel="2" linked="0" offset="0.00031530" rate="22050.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="8783" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00128.au' len='8783' min='-0.995320' max='0.843749' rms='0.066379'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+	<wavetrack name="shovel" channel="2" linked="0" offset="0.00059533" rate="22050.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="10061" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00129.au' len='10061' min='-0.890510' max='0.994403' rms='0.066756'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+	<wavetrack name="screwdriver" channel="2" linked="0" offset="0.00032190" rate="22050.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="17343" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00130.au' len='17343' min='-1.000000' max='0.981521' rms='0.081935'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+</audacityproject>
