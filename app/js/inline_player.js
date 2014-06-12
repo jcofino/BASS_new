@@ -39,11 +39,23 @@ function InlinePlayer() {
         sPaused: 'sm2_paused'
     }
 
-    this.addEventHandler = (typeof window.addEventListener !== 'undefined' ? function(o, evtName, evtHandler) {
-        return o.addEventListener(evtName, evtHandler, false);
-    } : function(o, evtName, evtHandler) {
-        o.attachEvent('on' + evtName, evtHandler);
-    });
+    this.addEventHandler = function(o, evtName, evtHandler){ 
+    	// refactor for jQuery event binding
+    	// .on( events [, selector ] [, data ], handler )
+    	o.on( evtName, evtHandler );
+    };
+    
+    /* Old, two-pronged solution for event binding
+    (typeof window.addEventListener !== 'undefined' ? 
+	    function(o, evtName, evtHandler) {
+	        return o.addEventListener(evtName, evtHandler, false);
+	    } : 
+	    function(o, evtName, evtHandler) {
+	        o.attachEvent('on' + evtName, evtHandler);
+	    }
+	  ); */
+
+		// **********************************************
 
 		/* This never seems to be called anywhere
     this.removeEventHandler = (typeof window.removeEventListener !== 'undefined' ? function(o, evtName, evtHandler) {
@@ -225,7 +237,7 @@ function InlinePlayer() {
             }
         }
         if (foundItems > 0) {
-            self.addEventHandler(document, 'click', self.handleClick);
+            self.addEventHandler($(document), 'click', self.handleClick);
             if (self.config.autoPlay) {
                 self.handleClick({
                     target: self.links[0],
