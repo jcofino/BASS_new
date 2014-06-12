@@ -133,7 +133,7 @@ function InlinePlayer() {
             if (pl.config.playNext) {
                 var nextLink = (pl.indexByURL[this._data.oLink.href] + 1);
                 if (nextLink < pl.links.length) {
-                    pl.handleClick({
+                    pl.handleKeystroke({
                         'target': pl.links[nextLink]
                     });
                 }
@@ -158,12 +158,9 @@ function InlinePlayer() {
         return e.target;
     }
 
-    this.handleClick = function(e) {
-        // a sound link was clicked
-        if (typeof e.button != 'undefined' && e.button > 1) {
-            // ignore right-click
-            return true;
-        }
+    this.handleKeystroke = function(e) {
+        // a sound link was keystroked
+        
         var o = self.getTheDamnLink(e);
         if (o.nodeName.toLowerCase() != 'a') {
             o = self.isChildOfNode(o, 'a');
@@ -244,9 +241,9 @@ function InlinePlayer() {
             }
         }
         if (foundItems > 0) {
-            self.addEventHandler($(document), 'click', self.handleClick);
+            self.addEventHandler($(document), 'click', self.handleKeystroke);
             if (self.config.autoPlay) {
-                self.handleClick({
+                self.handleKeystroke({
                     target: self.links[0],
                     preventDefault: function() {}
                 });
